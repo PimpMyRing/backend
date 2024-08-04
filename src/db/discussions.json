@@ -1,0 +1,36 @@
+[
+    {
+      "proposalId": "1",
+      "messages": [
+        {
+          "body": "I think this is a great idea. Reducing gas costs will benefit everyone.",
+          "sender": "Alice",
+          "date": "2023-01-02"
+        },
+        {
+          "body": "We should also consider the impact on miners.",
+          "sender": "Bob",
+          "date": "2023-01-03"
+        }
+      ]
+    },
+    {
+      "proposalId": "2",
+      "messages": [
+        {
+          "body": "Sharding will significantly improve scalability.",
+          "sender": "Charlie",
+          "date": "2023-02-02"
+        },
+        {
+          "body": "What about the complexity it introduces?",
+          "sender": "Dave",
+          "date": "2023-02-03"
+        }
+      ]
+    },
+    {
+      "proposalId": "3",
+      "messages": []
+    }
+  ]
