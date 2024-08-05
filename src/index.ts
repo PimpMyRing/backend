@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import proposalRoutes from './routes/proposals';
 import discussionRoutes from './routes/discussions';
+import getRingRoutes from './routes/getRing';
 
 const app = express();
 const port = process.env.PORT || 3022;
@@ -11,6 +12,7 @@ app.use(express.json());
 
 app.use('/api', proposalRoutes);
 app.use('/api', discussionRoutes);
+app.use('/api', getRingRoutes);
 
 
 app.get('/', (req, res) => {
