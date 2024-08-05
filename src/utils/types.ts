@@ -20,3 +20,5 @@ export interface Discussion {
   proposalId: string;
   messages: Message[];
 }
+
+export type ringPubSet = string[];
