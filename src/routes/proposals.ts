@@ -88,7 +88,6 @@ router.post('/proposals', async (req, res) => {
     closingDate,
     votes,
     author
-
   };
 
   // Read existing proposals, add the new one, and write back to file
@@ -97,6 +96,27 @@ router.post('/proposals', async (req, res) => {
   await writeProposalsToFile(proposals);
 
   res.status(201).json(newProposal);
+});
+
+/**
+ * PATCH /api/proposals/:id/vote
+ * Increments the vote count of a proposal by 1.
+ * NEEDS ONCHAIN CHECK - POC only
+ * @param {string} id - The ID of the proposal to increment the vote count.
+ * @returns {Proposal} The updated proposal, or a 404 error if not found.
+ */
+router.patch('/proposals/:id/vote', async (req, res) => {
+  const proposals = await readProposalsFromFile();
+  const proposalIndex = proposals.findIndex(p => p.id === req.params.id);
+
+  if (proposalIndex === -1) {
+    return res.status(404).json({ message: 'Proposal not found' });
+  }
+
+  proposals[proposalIndex].votes += 1;
+  await writeProposalsToFile(proposals);
+  
+  res.json(proposals[proposalIndex]);
 });
 
 export default router;

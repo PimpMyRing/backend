@@ -1,92 +1,92 @@
 [
-    {
-      "id": "1",
-      "title": "Increase Gas Efficiency",
-      "description": "Proposal to reduce the gas costs for executing transactions on the EVM.",
-      "publicationDate": "2023-01-01",
-      "closingDate": "2023-01-10",
-      "votes": 150,
-      "author": "Alice"
-    },
-    {
-      "id": "2",
-      "title": "Implement Sharding",
-      "description": "Proposal to implement sharding to increase scalability of the EVM.",
-      "publicationDate": "2023-02-01",
-      "closingDate": "2023-02-10",
-      "votes": 200,
-      "author": "Charlie"
-    },
-    {
-      "id": "3",
-      "title": "Improve Smart Contract Security",
-      "description": "Proposal to enhance the security features available for smart contracts on the EVM.",
-      "publicationDate": "2023-03-01",
-      "closingDate": "2023-03-10",
-      "votes": 175,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "4",
-      "title": "Enhance State Management",
-      "description": "Proposal to improve the state management mechanisms within the EVM.",
-      "publicationDate": "2023-04-01",
-      "closingDate": "2023-04-10",
-      "votes": 130,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "5",
-      "title": "Optimize Storage Costs",
-      "description": "Proposal to reduce the storage costs associated with using the EVM.",
-      "publicationDate": "2023-05-01",
-      "closingDate": "2023-05-10",
-      "votes": 220,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "6",
-      "title": "Increase Transaction Throughput",
-      "description": "Proposal to increase the number of transactions the EVM can handle per second.",
-      "publicationDate": "2023-06-01",
-      "closingDate": "2023-06-10",
-      "votes": 195,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "7",
-      "title": "Improve Developer Tooling",
-      "description": "Proposal to enhance the tools available for developers working with the EVM.",
-      "publicationDate": "2023-07-01",
-      "closingDate": "2023-07-10",
-      "votes": 160,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "8",
-      "title": "Enhance Network Stability",
-      "description": "Proposal to improve the stability and reliability of the EVM network.",
-      "publicationDate": "2023-08-01",
-      "closingDate": "2023-08-10",
-      "votes": 180,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "9",
-      "title": "Integrate zk-SNARKs",
-      "description": "Proposal to integrate zero-knowledge succinct non-interactive arguments of knowledge (zk-SNARKs) into the EVM.",
-      "publicationDate": "2023-09-01",
-      "closingDate": "2023-09-10",
-      "votes": 210,
-      "author": "Anonymous Proposer"
-    },
-    {
-      "id": "10",
-      "title": "Improve Interoperability",
-      "description": "Proposal to enhance the interoperability between the EVM and other blockchain networks.",
-      "publicationDate": "2023-10-01",
-      "closingDate": "2023-10-10",
-      "votes": 170,
-      "author": "Anonymous Proposer"
-    }
-  ]
+  {
+    "id": "1",
+    "title": "Increase Gas Efficiency",
+    "description": "Proposal to reduce the gas costs for executing transactions on the EVM.",
+    "publicationDate": "2023-01-01",
+    "closingDate": "2023-01-10",
+    "votes": 152,
+    "author": "Alice"
+  },
+  {
+    "id": "2",
+    "title": "Implement Sharding",
+    "description": "Proposal to implement sharding to increase scalability of the EVM.",
+    "publicationDate": "2023-02-01",
+    "closingDate": "2023-02-10",
+    "votes": 200,
+    "author": "Charlie"
+  },
+  {
+    "id": "3",
+    "title": "Improve Smart Contract Security",
+    "description": "Proposal to enhance the security features available for smart contracts on the EVM.",
+    "publicationDate": "2023-03-01",
+    "closingDate": "2023-03-10",
+    "votes": 175,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "4",
+    "title": "Enhance State Management",
+    "description": "Proposal to improve the state management mechanisms within the EVM.",
+    "publicationDate": "2023-04-01",
+    "closingDate": "2023-04-10",
+    "votes": 130,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "5",
+    "title": "Optimize Storage Costs",
+    "description": "Proposal to reduce the storage costs associated with using the EVM.",
+    "publicationDate": "2023-05-01",
+    "closingDate": "2023-05-10",
+    "votes": 220,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "6",
+    "title": "Increase Transaction Throughput",
+    "description": "Proposal to increase the number of transactions the EVM can handle per second.",
+    "publicationDate": "2023-06-01",
+    "closingDate": "2023-06-10",
+    "votes": 195,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "7",
+    "title": "Improve Developer Tooling",
+    "description": "Proposal to enhance the tools available for developers working with the EVM.",
+    "publicationDate": "2023-07-01",
+    "closingDate": "2023-07-10",
+    "votes": 160,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "8",
+    "title": "Enhance Network Stability",
+    "description": "Proposal to improve the stability and reliability of the EVM network.",
+    "publicationDate": "2023-08-01",
+    "closingDate": "2023-08-10",
+    "votes": 180,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "9",
+    "title": "Integrate zk-SNARKs",
+    "description": "Proposal to integrate zero-knowledge succinct non-interactive arguments of knowledge (zk-SNARKs) into the EVM.",
+    "publicationDate": "2023-09-01",
+    "closingDate": "2023-09-10",
+    "votes": 210,
+    "author": "Anonymous Proposer"
+  },
+  {
+    "id": "10",
+    "title": "Improve Interoperability",
+    "description": "Proposal to enhance the interoperability between the EVM and other blockchain networks.",
+    "publicationDate": "2023-10-01",
+    "closingDate": "2023-10-10",
+    "votes": 170,
+    "author": "Anonymous Proposer"
+  }
+]
