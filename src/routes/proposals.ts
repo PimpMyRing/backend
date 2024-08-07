@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { Proposal } from '../utils/types';
-import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs-extra';
 import path from 'path';
 
@@ -79,9 +78,15 @@ router.post('/proposals', async (req, res) => {
     return res.status(400).json({ message: 'Invalid proposal data' });
   }
 
+  // Read existing proposals
+  const proposals = await readProposalsFromFile();
+  
+  // Determine the new ID
+  const newId = proposals.length > 0 ? String(Number(proposals[proposals.length - 1].id) + 1) : '1';
+
   // Create a new proposal object
   const newProposal: Proposal = {
-    id: uuidv4(),
+    id: newId,
     title,
     description,
     publicationDate,
@@ -90,8 +95,7 @@ router.post('/proposals', async (req, res) => {
     author
   };
 
-  // Read existing proposals, add the new one, and write back to file
-  const proposals = await readProposalsFromFile();
+  // Add the new proposal and write back to file
   proposals.push(newProposal);
   await writeProposalsToFile(proposals);
 

@@ -88,5 +88,14 @@
     "closingDate": "2023-10-10",
     "votes": 170,
     "author": "Anonymous Proposer"
+  },
+  {
+    "id": "11",
+    "title": "Test Test",
+    "description": "big test",
+    "publicationDate": "2024-08-07",
+    "closingDate": "2024-08-14",
+    "votes": 0,
+    "author": "Anon"
   }
 ]
