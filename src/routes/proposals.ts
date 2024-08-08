@@ -78,11 +78,19 @@ router.get('/proposals/:chainId/:id', async (req, res) => {
 router.post('/proposals/:chainId', async (req, res) => {
   const { title, description, publicationDate, closingDate, votes, author, proposalId } = req.body;
   const { chainId } = req.params;
-
+  console.log("in post proposal\n", {
+    title,
+    description,
+    author,
+    publicationDate,
+    closingDate,
+    votes,
+    proposalId,
+    chainId
+  });
   // Validate request body
   if (
     !title ||
-    !description ||
     !author ||
     !publicationDate ||
     !closingDate ||
