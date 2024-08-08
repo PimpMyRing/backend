@@ -62,6 +62,7 @@ router.get('/proposals/:id', async (req, res) => {
 /**
  * POST /api/proposals
  * Creates a new proposal.
+ * @param {string} id - id of the proposal.
  * @param {string} title - The title of the proposal.
  * @param {string} description - The description of the proposal.
  * @param {string} publicationDate - The publication date of the proposal.
@@ -71,22 +72,19 @@ router.get('/proposals/:id', async (req, res) => {
  * @returns {Proposal} The newly created proposal.
  */
 router.post('/proposals', async (req, res) => {
-  const { title, description, publicationDate, closingDate, votes, author } = req.body;
+  const { id, title, description, publicationDate, closingDate, votes, author } = req.body;
 
   // Validate request body
-  if (!title || !description || !author || !publicationDate || !closingDate || typeof votes !== 'number') {
+  if ( !id || !title || !description || !author || !publicationDate || !closingDate || typeof votes !== 'number') {
     return res.status(400).json({ message: 'Invalid proposal data' });
   }
 
   // Read existing proposals
   const proposals = await readProposalsFromFile();
-  
-  // Determine the new ID
-  const newId = proposals.length > 0 ? String(Number(proposals[proposals.length - 1].id) + 1) : '1';
 
   // Create a new proposal object
   const newProposal: Proposal = {
-    id: newId,
+    id,
     title,
     description,
     publicationDate,
