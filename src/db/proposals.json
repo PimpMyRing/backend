@@ -1,20 +1,5 @@
-[
-  {
-    "id": "0",
-    "title": "First Proposal",
-    "description": "My First Proposal",
-    "publicationDate": "2024-08-07",
-    "closingDate": "2024-08-14",
-    "votes": 0,
-    "author": "Anon"
-  },
-  {
-    "id": "0",
-    "title": "TEst 2",
-    "description": "Test2",
-    "publicationDate": "2024-08-07",
-    "closingDate": "2024-08-14",
-    "votes": 0,
-    "author": "Anon"
-  }
-]
+{
+  "10": [],
+  "8453": [],
+  "11155420": []
+}

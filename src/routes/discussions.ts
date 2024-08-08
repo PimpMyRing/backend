@@ -52,10 +52,13 @@ const proposalExists = async (proposalId: string): Promise<boolean> => {
  * @param {string} proposalId - The ID of the proposal whose discussion is to be retrieved.
  * @returns {Discussion} - The discussion associated with the specified proposal, or a 404 error if not found.
  */
-router.get('/discussions/:proposalId', async (req, res) => {
-  const { proposalId } = req.params;
-  const discussions = await readFromFile<Discussion[]>(discussionsDbFilePath);
-  const discussion = discussions.find(d => d.proposalId === proposalId);
+router.get('/discussions/:chainId/:proposalId', async (req, res) => {
+  const { proposalId, chainId } = req.params;
+  const discussions = await readFromFile<{"10": Discussion[], "8453": Discussion[], "11155420": Discussion[]}>(discussionsDbFilePath);
+  if(chainId != "10" && chainId != "8453" && chainId != "11155420") {
+    return res.status(404).json({ message: 'Unknown chain id' });
+  }
+  const discussion = discussions[chainId].find(d => d.proposalId === proposalId);
   if (discussion) {
     res.json(discussion);
   } else {
@@ -72,8 +75,8 @@ router.get('/discussions/:proposalId', async (req, res) => {
  * @param {string} date - The date the message was sent.
  * @returns {Message} - The newly added message, or a 400 error if the message data is invalid, or a 404 error if the proposal is not found.
  */
-router.post('/discussions/:proposalId/messages', async (req, res) => {
-  const { proposalId } = req.params;
+router.post('/discussions/:chainId/:proposalId/messages', async (req, res) => {
+  const { proposalId, chainId } = req.params;
   const { body, sender, date } = req.body;
 
   if (!body || !sender || !date) {
@@ -86,8 +89,11 @@ router.post('/discussions/:proposalId/messages', async (req, res) => {
 
   const newMessage: Message = { body, sender, date };
 
-  const discussions = await readFromFile<Discussion[]>(discussionsDbFilePath);
-  let discussion = discussions.find(d => d.proposalId === proposalId);
+  const discussions = await readFromFile<{"10": Discussion[], "8453": Discussion[], "11155420": Discussion[]}>(discussionsDbFilePath);
+  if(chainId != "10" && chainId != "8453" && chainId != "11155420") {
+    return res.status(404).json({ message: 'Unknown chain id' });
+  }
+  let discussion = discussions[chainId].find(d => d.proposalId === proposalId);
 
   if (discussion) {
     discussion.messages.push(newMessage);
@@ -96,7 +102,7 @@ router.post('/discussions/:proposalId/messages', async (req, res) => {
       proposalId,
       messages: [newMessage],
     };
-    discussions.push(discussion);
+    discussions[chainId].push(discussion);
   }
 
   await writeToFile(discussionsDbFilePath, discussions);
