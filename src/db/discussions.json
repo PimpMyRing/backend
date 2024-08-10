@@ -29,12 +29,54 @@
           "date": "2023-02-03"
         }
       ]
-    },
-    {
-      "proposalId": "3",
-      "messages": []
     }
   ],
   "8453": [],
-  "11155420": []
+  "11155420": [
+    {
+      "proposalId": "3",
+      "messages": [
+        {
+          "body": "GM people, I think we should consider this proposal.",
+          "sender": "Anon",
+          "date": "2023-02-02"
+        },
+        {
+          "body": "aaa",
+          "sender": "You",
+          "date": "2024-08-10T02:20:44.745Z"
+        }
+      ]
+    },
+    {
+      "proposalId": "4",
+      "messages": [
+        {
+          "body": "I think this is a great idea. Reducing gas costs will benefit everyone.",
+          "sender": "Alice",
+          "date": "2023-01-02"
+        },
+        {
+          "body": "We should also consider the impact on miners.",
+          "sender": "Bob",
+          "date": "2023-01-03"
+        },
+        {
+          "body": "bbb",
+          "sender": "You",
+          "date": "2024-08-10T02:23:30.069Z"
+        }
+      ]
+    },
+    {
+      "proposalId": "8",
+      "messages": [
+        {
+          "body": "Great initiative !",
+          "sender": "You",
+          "date": "2024-08-10T02:34:55.062Z"
+        }
+      ]
+    }
+  ]
 }

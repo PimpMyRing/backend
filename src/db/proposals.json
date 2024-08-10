@@ -8,7 +8,7 @@
       "description": "should be 3 in contract",
       "publicationDate": "2024-08-08",
       "closingDate": "2024-08-15",
-      "votes": 1,
+      "votes": 2,
       "author": "Anon"
     },
     {
@@ -17,6 +17,15 @@
       "description": "i love ai",
       "publicationDate": "2024-08-08",
       "closingDate": "2024-08-15",
+      "votes": 1,
+      "author": "Anon"
+    },
+    {
+      "id": "8",
+      "title": "Launch a new grant program",
+      "description": "Support the community by launching a new grant program !",
+      "publicationDate": "2024-08-10",
+      "closingDate": "2024-08-17",
       "votes": 1,
       "author": "Anon"
     }

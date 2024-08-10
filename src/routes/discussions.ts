@@ -37,27 +37,38 @@ const writeToFile = async <T>(filePath: string, data: T): Promise<void> => {
 };
 
 /**
- * Verifies if a proposal with the given ID exists.
+ * Verifies if a proposal with the given ID exists within the specified chain.
  * @param {string} proposalId - The ID of the proposal to check.
+ * @param {string} chainId - The chain ID to check in the proposals.
  * @returns {Promise<boolean>} - A promise that resolves to true if the proposal exists, otherwise false.
  */
-const proposalExists = async (proposalId: string): Promise<boolean> => {
-  const proposals = await readFromFile<Proposal[]>(proposalsDbFilePath);
-  return proposals.some(p => p.id === proposalId);
+const proposalExists = async (proposalId: string, chainId: string): Promise<boolean> => {
+  const proposals = await readFromFile<{ [key: string]: Proposal[] }>(proposalsDbFilePath);
+  const chainProposals = proposals[chainId];
+  
+  if (!Array.isArray(chainProposals)) {
+    console.error(`Invalid proposals data format for chainId ${chainId}. Expected an array.`);
+    return false;
+  }
+
+  return chainProposals.some(p => p.id === proposalId);
 };
 
 /**
- * GET /api/discussions/:proposalId
- * Retrieves the discussion associated with a specific proposal.
+ * GET /api/discussions/:chainId/:proposalId
+ * Retrieves the discussion associated with a specific proposal within the specified chain.
+ * @param {string} chainId - The chain ID to check in the discussions.
  * @param {string} proposalId - The ID of the proposal whose discussion is to be retrieved.
  * @returns {Discussion} - The discussion associated with the specified proposal, or a 404 error if not found.
  */
 router.get('/discussions/:chainId/:proposalId', async (req, res) => {
   const { proposalId, chainId } = req.params;
-  const discussions = await readFromFile<{"10": Discussion[], "8453": Discussion[], "11155420": Discussion[]}>(discussionsDbFilePath);
-  if(chainId != "10" && chainId != "8453" && chainId != "11155420") {
+  const discussions = await readFromFile<{ [key: string]: Discussion[] }>(discussionsDbFilePath);
+  
+  if (!discussions[chainId]) {
     return res.status(404).json({ message: 'Unknown chain id' });
   }
+
   const discussion = discussions[chainId].find(d => d.proposalId === proposalId);
   if (discussion) {
     res.json(discussion);
@@ -67,8 +78,9 @@ router.get('/discussions/:chainId/:proposalId', async (req, res) => {
 });
 
 /**
- * POST /api/discussions/:proposalId/messages
- * Adds a new message to the discussion associated with a specific proposal.
+ * POST /api/discussions/:chainId/:proposalId/messages
+ * Adds a new message to the discussion associated with a specific proposal within the specified chain.
+ * @param {string} chainId - The chain ID to check in the discussions.
  * @param {string} proposalId - The ID of the proposal to which the message is to be added.
  * @param {string} body - The body of the message.
  * @param {string} sender - The sender of the message.
@@ -83,16 +95,18 @@ router.post('/discussions/:chainId/:proposalId/messages', async (req, res) => {
     return res.status(400).json({ message: 'Invalid message data' });
   }
 
-  if (!await proposalExists(proposalId)) {
+  if (!await proposalExists(proposalId, chainId)) {
     return res.status(404).json({ message: 'Proposal not found' });
   }
 
   const newMessage: Message = { body, sender, date };
 
-  const discussions = await readFromFile<{"10": Discussion[], "8453": Discussion[], "11155420": Discussion[]}>(discussionsDbFilePath);
-  if(chainId != "10" && chainId != "8453" && chainId != "11155420") {
-    return res.status(404).json({ message: 'Unknown chain id' });
+  const discussions = await readFromFile<{ [key: string]: Discussion[] }>(discussionsDbFilePath);
+  
+  if (!(chainId in discussions)) {
+    discussions[chainId] = [];
   }
+  
   let discussion = discussions[chainId].find(d => d.proposalId === proposalId);
 
   if (discussion) {
