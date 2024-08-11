@@ -10,7 +10,7 @@ on:
 env:
   SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
   SSH_USER: ${{ secrets.EC2_USERNAME }}
-  SSH_HOST: ${{ secrets.PRIVATEAIRDROPCLAIM_BACKEND_EC2_URL }}
+  SSH_HOST: ${{ secrets.EC2_URL }}
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   DOCKER_REPO: daooftheringapi
