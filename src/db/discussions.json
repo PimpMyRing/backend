@@ -4,14 +4,103 @@
       "proposalId": "1",
       "messages": [
         {
-          "body": "I think this is a great idea. Reducing gas costs will benefit everyone.",
-          "sender": "Alice",
-          "date": "2023-01-02"
+          "body": "This is a great initiative! Empowering members to launch their own projects will drive innovation within the DAO.",
+          "sender": "Anon: 0x1a3f9d2e",
+          "date": "2024-08-12"
         },
         {
-          "body": "We should also consider the impact on miners.",
-          "sender": "Bob",
-          "date": "2023-01-03"
+          "body": "How will the committee ensure that the funds are distributed fairly among different types of projects?",
+          "sender": "Anon: 0x4b6c8f10",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "I support this, but we should also include a clause for auditing these projects to avoid misuse of funds.",
+          "sender": "Anon: 0xa2d9b3f7",
+          "date": "2024-08-13"
+        },
+        {
+          "body": "The initial allocation seems reasonable, but how will we handle situations where there’s more demand than available funds?",
+          "sender": "Anon: 0xc7e6a1b2",
+          "date": "2024-08-13"
+        }
+      ]
+    }
+  ],
+  "8453": [
+    {
+      "proposalId": "0",
+      "messages": [
+        {
+          "body": "Definitely need more developers, but we should clearly define what skills we are looking for.",
+          "sender": "Anon: 0x8d3f7a12",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "Hiring new developers is crucial, but do we have the budget to support this?",
+          "sender": "Anon: 0xb2a9c6e4",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "We should focus on finding developers with experience in smart contracts and security, given the importance of those areas.",
+          "sender": "Anon: 0xd5b3a9f1",
+          "date": "2024-08-13"
+        },
+        {
+          "body": "It might be better to hire on a contract basis first to ensure we’re getting the right talent before committing to full-time positions.",
+          "sender": "Anon: 0xe4c8b5f3",
+          "date": "2024-08-13"
+        }
+      ]
+    }
+  ],
+  "11155420": [
+    {
+      "proposalId": "0",
+      "messages": [
+        {
+          "body": "Doubling the marketing budget is a good move, but we need a detailed plan on how the extra funds will be utilized.",
+          "sender": "Anon: 0x6f1b8c3a",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "Are there any specific campaigns or partnerships already in mind that justify this increase?",
+          "sender": "Anon: 0x9c4d7e5b",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "I’m all for this, but let’s make sure there’s a strong focus on ROI. We should track the effectiveness of our marketing efforts closely.",
+          "sender": "Anon: 0x2f3e9a7b",
+          "date": "2024-08-13"
+        },
+        {
+          "body": "Perhaps we could allocate a portion of this budget to community-driven marketing initiatives as well.",
+          "sender": "Anon: 0xa7c2d8e9",
+          "date": "2024-08-13"
+        }
+      ]
+    },
+    {
+      "proposalId": "1",
+      "messages": [
+        {
+          "body": "This educational initiative is crucial. It will help onboard new members and enhance the skills of existing ones.",
+          "sender": "Anon: 0x4e5b7f1a",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "We should partner with established educational platforms to deliver high-quality content.",
+          "sender": "Anon: 0xb8c1d4e3",
+          "date": "2024-08-12"
+        },
+        {
+          "body": "It’s important to include certifications or badges as part of the program to recognize members' achievements.",
+          "sender": "Anon: 0xd9f7a2b8",
+          "date": "2024-08-13"
+        },
+        {
+          "body": "The budget seems a bit low considering the scope of the initiative. We may need to reassess this as the program grows.",
+          "sender": "Anon: 0xa3c4e7f9",
+          "date": "2024-08-13"
         }
       ]
     },
@@ -19,58 +108,26 @@
       "proposalId": "2",
       "messages": [
         {
-          "body": "Sharding will significantly improve scalability.",
-          "sender": "Charlie",
-          "date": "2023-02-02"
+          "body": "This is an excellent step towards making the DAO more environmentally responsible.",
+          "sender": "Anon: 0xc2e5f7a1",
+          "date": "2024-08-12"
         },
         {
-          "body": "What about the complexity it introduces?",
-          "sender": "Dave",
-          "date": "2023-02-03"
-        }
-      ]
-    }
-  ],
-  "8453": [],
-  "11155420": [
-    {
-      "proposalId": "9",
-      "messages": [
-        {
-          "body": "That's a great idea ! What are the step to achieve that ?",
-          "sender": "Anon Ring Member",
-          "date": "2024-08-10T19:59:46.368Z"
+          "body": "We should prioritize projects that have immediate, measurable impacts on our carbon footprint.",
+          "sender": "Anon: 0x1d4b6c7f",
+          "date": "2024-08-12"
         },
         {
-          "body": "Budget ?",
-          "sender": "Anon Ring Member",
-          "date": "2024-08-10T20:00:04.044Z"
+          "body": "Are there specific green technologies or projects already being considered for this fund?",
+          "sender": "Anon: 0x7f2c9a5b",
+          "date": "2024-08-13"
+        },
+        {
+          "body": "The $200,000 allocation is a good start, but we should be prepared to increase this as the demand and impact grow.",
+          "sender": "Anon: 0xe1b6d9f4",
+          "date": "2024-08-13"
         }
       ]
-    },
-    {
-      "proposalId": "10",
-      "messages": []
-    },
-    {
-      "proposalId": "11",
-      "messages": []
-    },
-    {
-      "proposalId": "12",
-      "messages": []
-    },
-    {
-      "proposalId": "13",
-      "messages": []
-    },
-    {
-      "proposalId": "16",
-      "messages": []
-    },
-    {
-      "proposalId": "17",
-      "messages": []
     }
   ]
 }
