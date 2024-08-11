@@ -25,4 +25,4 @@ EXPOSE 8081
 RUN yarn build
 
 # Set the command to start the React application using the build folder
-CMD ["yarn", "serve", "-s", "build", "-l", "8081"]
+CMD ["yarn", "serve", "-s", "dist", "-l", "8081"]

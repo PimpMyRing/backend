@@ -5,7 +5,7 @@ import discussionRoutes from './routes/discussions';
 import getRingRoutes from './routes/getRing';
 
 const app = express();
-const port = process.env.PORT || 3022;
+const port = process.env.PORT || 8081;
 
 app.use(cors());
 app.use(express.json());
