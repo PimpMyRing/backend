@@ -1,7 +1,7 @@
 import {ethers } from 'ethers';
 
 
-// generates 100 random wallets and return then as :
+// generates 20 random wallets and return then as :
 // {
 //     address: string;
 //     privateKey: string;
@@ -22,7 +22,7 @@ const generateWallets = (n: number) => {
     return wallets;
 }
 
-const wallets = generateWallets(100);
+const wallets = generateWallets(20);
 
 
 // sanity check:

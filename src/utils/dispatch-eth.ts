@@ -8,7 +8,7 @@ async function dispatchEth(addresses: string[]): Promise<void> {
     throw new Error("Missing environment variables");
   }
 
-  const value = ethers.utils.parseEther("0.001");
+  const value = ethers.utils.parseEther("0.0009");
 
   const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
   const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
@@ -36,13 +36,14 @@ async function dispatchEth(addresses: string[]): Promise<void> {
   const provider = new ethers.providers.JsonRpcProvider(process.env.RPC_URL);
 
   // mint the SBT for each address
-  let cpt = 0;
+  let cpt = 1;
   const len = members.length;
   for (const member of members) {
     const signer = new ethers.Wallet(member.privateKey, provider);
     const contract = new ethers.Contract(process.env.SBT_ADDRESS, ["function mint(uint8 level) public"], signer);
-
-    const result = await contract.mint(1);
+    // console.log("member.address", member.address);
+    // with manual gas limit
+    const result = await contract.mint(1, { gasLimit: 98000});
     await result.wait(3);
     // mint the SBT
     console.log(`${cpt}/${len}\tMinted SBT for ${member.address}`);
