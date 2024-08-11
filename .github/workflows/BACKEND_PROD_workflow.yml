@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ""
 
 env:
   SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
